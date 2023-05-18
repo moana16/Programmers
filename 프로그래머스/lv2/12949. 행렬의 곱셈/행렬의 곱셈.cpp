@@ -8,9 +8,9 @@ vector<vector<int>> solution(vector<vector<int>> arr1, vector<vector<int>> arr2)
         for (int j = 0; j < arr2[0].size(); j++) {
             int ans = 0;
             for (int k = 0; k < arr1[0].size(); k++) {
-                ans += arr1[i][k] * arr2[k][j];
+                answer[i][j] += arr1[i][k] * arr2[k][j];
             }
-            answer[i][j] = ans;
+             
         }
     }
     return answer;
