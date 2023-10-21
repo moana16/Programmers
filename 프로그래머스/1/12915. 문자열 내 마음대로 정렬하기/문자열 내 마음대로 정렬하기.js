@@ -1,9 +1,4 @@
 function solution(strings, n) {
-    return strings.sort((x, y) => {
-        const compareByNthChar = x[n].localeCompare(y[n]);
-        if (compareByNthChar === 0) {
-            return x.localeCompare(y);
-        }
-        return compareByNthChar;
-    });
+    return strings.sort((x, y) => x[n] === y[n] ? x.localeCompare(y) : x[n].localeCompare(y[n]));
 }
+       
